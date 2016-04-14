@@ -766,6 +766,15 @@ table.airy tr td {
   right: 0;
 }
 
+.property-help {
+  display: inline-block;
+  width: 10px;
+  height: 14px;
+  margin-left: 7px;
+  font-size: 14px;
+  color: #888;
+}
+
 .hover-dropdown {
   display: inline-block;
   position: relative;
@@ -967,4 +976,8 @@ h4.header {
 
 .table-results table > thead > tr > td:first-child, .table-results table > tbody > tr > td:first-child {
   background-color: #f9f9f9;
+}
+
+.tooltip {
+  z-index: 3000 !important;
 }

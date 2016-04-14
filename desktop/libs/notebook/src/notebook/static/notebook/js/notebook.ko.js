@@ -1231,6 +1231,15 @@
       }
     };
 
+    self.saveDefaultUserProperties = function (session) {
+      var assistHelper = AssistHelper.getInstance();
+      assistHelper.saveConfiguration({
+        app: session.type(),
+        properties: session.properties,
+        userId: vm.userId
+      });
+    };
+
     self.closeAndRemoveSession = function (session) {
       self.closeSession(session, false, function() {
         self.sessions.remove(session);
@@ -1366,6 +1375,7 @@
     var self = this;
     self.i18n = i18n;
     self.user = options.user;
+    self.userId = options.userId;
     self.selectedNotebook = ko.observable();
     self.combinedContent = ko.observable();
     self.isPlayerMode = ko.observable(false);
